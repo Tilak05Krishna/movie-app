@@ -1,0 +1,17 @@
+
+.movie__details{
+    display: flex;
+    flex-direction: column;
+}
+
+.input__text{
+    height: 15px;
+    width: 300px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+

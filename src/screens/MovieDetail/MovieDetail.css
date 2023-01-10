@@ -1,0 +1,62 @@
+.movie__detail{
+    color: #fff;
+    background-color: #0c111b;
+}
+
+.movie_detail_trailer{
+    margin-top: 20px;
+}
+
+.movie__detail_container {
+    margin-left: 20px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.comments__container{
+    margin-top: 50px;
+}
+.all_comments{
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.total_count{
+    font-weight: 700;
+}
+
+.add_comment_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.add_comment{
+    resize: none;
+    background-color: #0c111b;
+    border:none;
+    outline: none;
+    border-bottom: 1px solid white;
+    color: #939393;
+    width:  500px;
+    margin-top: 20px;
+}
+
+.comment__button{
+    border-radius: '30%';
+    align-self: flex-start;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: #EAFDFC;
+    border: 1px solid;
+    border-radius: 20px;
+    margin-top: 20px;
+    border-color: #a88734 #9c7e31 #846a29;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.description {
+    padding: 10px;
+    box-shadow: 0px 0px 0px 1px rgb(255, 255, 255,0.2); 
+}

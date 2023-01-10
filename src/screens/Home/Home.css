@@ -1,0 +1,19 @@
+
+.home{
+    background-color: #0c111b;
+}
+
+.home__title{
+    color: rgb(255, 255, 255, 0.8);
+    font-family: cursive;
+    margin-left: 110px;
+}
+
+.movies__container{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr ;
+    margin: auto;
+    max-width: 1300px;
+    margin-top: 40px;
+}

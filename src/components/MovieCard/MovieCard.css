@@ -1,0 +1,30 @@
+.movie__card {
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start;
+}
+
+.movie__name{
+    color: #fff;
+}
+
+.movie__description{
+    color: white;
+}
+
+
+.ellipsize {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+}
+
+img {
+width: 100%;
+height: 80%;
+object-fit: fill;
+}
