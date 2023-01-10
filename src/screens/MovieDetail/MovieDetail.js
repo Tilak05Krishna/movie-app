@@ -33,7 +33,7 @@ const MovieDetail = () => {
     return (
         <div className="movie__detail">
             <div className="movie__detail_container">
-                <ReactPlayer className="movie_detail_trailer" url="https://www.youtube.com/watch?v=S-14xV2j7B4" width="100%" height="600px" controls={true} />
+                <ReactPlayer className="movie_detail_trailer" url="https://www.youtube.com/watch?v=d9MyW72ELq0" width="100%" height="600px" controls={true} />
                 <h2>{name}</h2>
                 <h3>Description</h3>
                 <div className="description">
