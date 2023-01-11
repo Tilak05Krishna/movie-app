@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.css";
 import axios from '../../axios';
 
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
+
+    useEffect(() => {
+        localStorage.clear();
+    });
 
     const login = async (event) => {
         event.preventDefault();
@@ -21,7 +27,8 @@ const Login = () => {
         if (loginResponse.data.message === 'Success') {
             localStorage.removeItem('token');
             localStorage.setItem('token', loginResponse.data?.token);
-            navigate("/home");
+            dispatch({ type: "SIGN_IN", payload: { email: loginResponse.data.email, role: loginResponse.data.role } })
+            navigate("/");
         } else {
             setMessage(loginResponse.data.message);
         }
@@ -40,7 +47,7 @@ const Login = () => {
             setMessage('');
             localStorage.removeItem('token');
             localStorage.setItem('token', registerResponse.data?.token);
-            navigate('/home');
+            navigate('/');
         } else {
             setMessage(registerResponse.data.message);
         }
@@ -70,7 +77,7 @@ const Login = () => {
                     </button>
                 </form>
                 <button onClick={register} className="login__registerButton">
-                    Create Your Amazon Account
+                    Create new account
                 </button>
             </div>
         </div >

@@ -1,17 +1,54 @@
+.movieDetails__container{
+   max-width: 300px;
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   border: 1px solid lightgrey;
+   margin: auto;
+   margin-top: 20px;
+   background-color: #F1F6F5;
+}
 
-.movie__details{
+.message{
+    color: green;
+    margin: 0;
+}
+
+h1{
+    color: #fff;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.addMovie__container{
     display: flex;
     flex-direction: column;
 }
 
-.input__text{
-    height: 15px;
-    width: 300px;
-    border: 1px solid black;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+.addMovie__container > form > h5 {
+    margin-bottom: 5px;
+ }
 
+ .addMovie__container > form > input {
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 98%;
+ }
+
+ .submit__button{
+    border-radius: '30%';
+    align-self: flex-start;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: #EAFDFC;
+    border: 1px solid;
+    border-radius: 20px;
+    margin-top: 20px;
+    border-color: #30a9e1 #0ac7e9 #92d3ed;
+    font-size: 16px;
+    font-weight: 600;
 }
+
 

@@ -12,6 +12,7 @@
     flex-direction: column;
     padding: 20px;
     border: 1px solid lightgrey;
+    margin-bottom: 30px;
  }
 
  .login__container > h1 {
@@ -28,11 +29,6 @@
     margin-bottom: 10px;
     background-color: white;
     width: 98%;
- }
-
- .login__container > p {
-   margin-top: 15px;
-   font-size: 12px;
  }
 
 .login__signInButton{

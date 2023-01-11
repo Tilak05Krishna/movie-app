@@ -5,8 +5,10 @@ import { useLocation } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import './MovieDetail.css';
 import Comment from '../../components/Comment/Comment';
+import axios from '../../axios';
 
 const MovieDetail = () => {
+    const user = useSelector(state => state.user);
     const dispatch = useDispatch();
     const comments = useSelector((state) => state.comments);
     const { state } = useLocation();
@@ -20,14 +22,21 @@ const MovieDetail = () => {
         setComment(event.target.value);
     };
 
-    const handleCommentAdded = () => {
+    const handleCommentAdded = async () => {
         setComment('');
         dispatch({
             type: 'ADD_COMMENT', payload: {
-                userName: 'Tilak',
+                userName: user[0].email,
                 userComment: comment
             }
-        })
+        });
+        await axios({
+            method: 'POST',
+            url: '/movie/{id}/addComment',
+            data: {
+                userComment: comment
+            }
+        });
     };
 
     return (
