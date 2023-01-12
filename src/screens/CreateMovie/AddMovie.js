@@ -38,7 +38,7 @@ const AddMovie = () => {
           'Authorization': `bearer ${localStorage.getItem('token')}`
         }
       });
-      dispatch({ type: "ADD_MOVIE", payload: movie })
+      dispatch({ type: "ADD_MOVIE", payload: [movie] })
       setName('');
       setDescription('');
       setMessage('Movie details registered successfully.');

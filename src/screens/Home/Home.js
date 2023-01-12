@@ -14,11 +14,7 @@ const Home = () => {
                 method: 'GET',
                 url: '/movies'
             });
-            console.log(movies);
-            for (const movie of movies.data) {
-                console.log(movie);
-                dispatch({ type: 'ADD_MOVIE', payload: movie })
-            }
+            dispatch({ type: 'ADD_MOVIE', payload: movies.data });
         } catch (e) {
             console.log(e);
         }

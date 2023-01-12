@@ -26,7 +26,8 @@ function App() {
           />
           <Route
             path="/addMovie"
-            element={<AddMovie />}
+            element={(<div>
+              <Header /><AddMovie /></div>)}
           />
           <Route
             path="/movieDetail"
